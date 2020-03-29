@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 let express = require('express')
 let server = express()
 let cors = require('cors')
@@ -9,7 +11,7 @@ server.use(cors())
 server.use(helmet())
 
 server.get('/', (req, res) => {
-    res.status(200).send("Success connecting to DB")
+    res.status(200).send("You have successfully connected!")
   }
 )
 
