@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
     })
 })
 
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
     const {id} = req.params
     db('userPost').where({id}).del().then(response => {
         if(response){
