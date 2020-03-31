@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const Users = require('../helpers/users-model')
-const UserStats = require('../helpers/userStats-model')
+const Users = require('../helpers/user-helper')
+const UserStats = require('../helpers/userStats-helper')
 
 
 
@@ -51,3 +51,5 @@ router.delete('/:id', (req, res) => {
         res.status(500).json({error: "there was an error deleting the user", error})
     })
 })
+
+module.exports = router

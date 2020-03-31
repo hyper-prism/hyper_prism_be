@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const userStats = require('../helpers/usersStats-model')
+const userStats = require('../helpers/userStats-helper')
 const db = require('../data/dbConfig')
 
 router.get('/', (req, res) => {
@@ -57,3 +57,6 @@ router.delete('/:id', (req, res) => {
         res.status(500).json({error: "There was an error deleting your data", error})
     })
 })
+
+
+module.exports = router
