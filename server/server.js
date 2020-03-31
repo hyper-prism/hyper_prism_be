@@ -10,6 +10,12 @@ server.use(express.json())
 server.use(cors())
 server.use(helmet())
 
+const usersRouter = require('../routers/usersRouter')
+server.use('/api/users', usersRouter)
+
+const userStats = require('../routers/userStats')
+server.use('/api/userStats', userStats)
+
 server.get('/', (req, res) => {
     res.status(200).send("You have successfully connected!")
   }
