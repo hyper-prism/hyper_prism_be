@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     let body = req.body
-    db('userPost').insert(body).then(response => {
+    db('userStats').insert(body).then(response => {
         if(response){
             res.status(200).json(response)
         } else {
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const {id} = req.params
-    db('userPost').where({id}).del().then(response => {
+    db('userStats').where({id}).del().then(response => {
         if(response){
             res.status(200).json(response)
         } else {
