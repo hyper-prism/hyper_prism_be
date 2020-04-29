@@ -19,7 +19,7 @@ server.use('/api/users', usersRouter)
 const userStats = require('../routers/userStats')
 server.use('/api/userStats', userStats)
 
-const contactRouter = require('./.routers/contactRouter')
+const contactRouter = require('../routers/contactRouter')
 server.use('/api/contact', contactRouter)
 
 server.get('/', (req, res) => {
